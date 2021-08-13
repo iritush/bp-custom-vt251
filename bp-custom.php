@@ -10,7 +10,7 @@ function buddypress_tab_towns() {
 			'slug' => 'towns-visited', 
 			'screen_function' => 'buddypress_towns_screen',
 			'default_subnav_slug' => 'towns-visited-list',
-			'position' => 40,
+			'position' => 1,
 			'show_for_displayed_user' => true,
 	) );
 	// Show list of towns that the member checked off as visited
@@ -20,12 +20,12 @@ function buddypress_tab_towns() {
 		'parent_url'        => trailingslashit( bp_displayed_user_domain() . 'towns-visited' ),
 		'parent_slug'       => 'towns-visited',
 		'screen_function' => 'buddypress_towns_screen',
-		'position' => 40,
+		'position' => 1,
 		'show_for_displayed_user' => true,
 	) );
 	// Map containing pins for all members visited towns
 	bp_core_new_subnav_item( array(
-		'name'                  => 'map',
+		'name'                  => 'Map',
 		'slug'                  => 'map',
 		'parent_url'        => trailingslashit( bp_displayed_user_domain() . 'towns-visited' ),
 		'parent_slug'       => 'towns-visited',
@@ -122,4 +122,17 @@ function bpcodex_rename_profile_tabs() {
 	buddypress()->members->nav->edit_nav( array( 'name' => __( 'Towns Visited Map', 'textdomain' ) ), 'location' );
 }
 add_action( 'bp_actions', 'bpcodex_rename_profile_tabs' );
+
+/***
+ * bp: reorder profile tabs
+ */
+function bpcodex_change_notifications_nav_position() {
+    buddypress()->members->nav->edit_nav( array(
+        'position' => 5,
+    ), 'buddyblog' );
+	buddypress()->members->nav->edit_nav( array(
+        'position' => 10,
+    ), 'mediapress' );
+}
+add_action( 'bp_setup_nav', 'bpcodex_change_notifications_nav_position', 100 );
 ?>
