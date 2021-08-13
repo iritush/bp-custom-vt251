@@ -127,11 +127,14 @@ add_action( 'bp_actions', 'bpcodex_rename_profile_tabs' );
  * bp: reorder profile tabs
  */
 function bpcodex_change_notifications_nav_position() {
-    buddypress()->members->nav->edit_nav( array(
-        'position' => 5,
-    ), 'buddyblog' );
+	buddypress()->members->nav->edit_nav( array(
+        'position' => 1,
+    ), 'towns-visited' );
 	buddypress()->members->nav->edit_nav( array(
         'position' => 10,
+    ), 'buddyblog' );
+	buddypress()->members->nav->edit_nav( array(
+        'position' => 12,
     ), 'mediapress' );
 }
 add_action( 'bp_setup_nav', 'bpcodex_change_notifications_nav_position', 100 );
