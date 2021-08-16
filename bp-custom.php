@@ -87,7 +87,7 @@ function towns_tab_title() {
 }
 
 function map_tab_title() {
-	echo 'Map of Towns You Visited';
+	echo 'Coming Soon! This map feature will be updated to more clearly show which towns you have visited in Vermont';
   }
 
 function add_towns_tab_title() {
