@@ -83,7 +83,9 @@ function buddydev_edit_profile_group_data() {
 }
 
 function towns_tab_title() {
-  echo 'Towns You Visited';
+  $num_of_towns_visited = count (xprofile_get_field_data('Towns Visited'));
+  echo 'You Visited ' . $num_of_towns_visited . ' Towns!<br>';
+
 }
 
 function map_tab_title() {
