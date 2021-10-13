@@ -109,7 +109,7 @@ function towns_tab_content() {
 }
 
 function map_tab_content_content() {
-	echo do_shortcode ('[leaflet-map tileurl=null lat=44.000000 lng=-72.699997 height=670 zoom=8]');
+	echo do_shortcode ('[leaflet-map tileurl=null lat=44.000000 lng=-72.699997 height=670 zoom=8.45]');
 }
 
 /***
