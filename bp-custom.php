@@ -89,7 +89,7 @@ function towns_tab_title() {
 }
 
 function map_tab_title() {
-	echo ' A green dot will appear for towns you have checked off on your Town Visited List';
+	echo '<center>Towns Visited Map</center>';
   }
 
 function add_towns_tab_title() {
@@ -109,7 +109,7 @@ function towns_tab_content() {
 }
 
 function map_tab_content_content() {
-	echo do_shortcode ('[leaflet-map tileurl=null lat=44.000000 lng=-72.699997 height=670 zoom=8.45]');
+	echo do_shortcode ('[leaflet-map tileurl=null lat=44.000000 lng=-72.699997 height=650 zoom=8]');
 }
 
 /***
