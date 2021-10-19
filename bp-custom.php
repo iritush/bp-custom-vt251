@@ -89,7 +89,8 @@ function towns_tab_title() {
 }
 
 function map_tab_title() {
-	echo '<center>Towns Visited Map</center>';
+	// shortcode for printing using print o matic plugin. More info:  https://pluginoven.com/plugins/print-o-matic/documentation/shortcode/
+	echo '<upperleft>'.do_shortcode ('[print-me target=".leaflet-pane"/]').'</upperleft><center>Towns Visited Map</center>';
   }
 
 function add_towns_tab_title() {
@@ -105,7 +106,6 @@ function towns_tab_content() {
 	foreach($towns_visited as $town){
 		echo $town . '<br>';
 	} 
-
 }
 
 function map_tab_content_content() {
