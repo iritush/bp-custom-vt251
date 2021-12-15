@@ -77,7 +77,7 @@ function bpcodex_rename_profile_tabs() {
   
 	buddypress()->members->nav->edit_nav( array( 'name' => __( 'Notes', 'textdomain' ) ), BP_BUDDYBLOG_SLUG );
 	buddypress()->members->nav->edit_nav( array('name' => 'Add New Note',), 'edit', BP_BUDDYBLOG_SLUG );
-	buddypress()->members->nav->edit_nav( array('name' => 'Notes: We will be continuing to update this section to make it more user friendly.  Stay tuned!',), BUDDYBLOG_ARCHIVE_SLUG, BP_BUDDYBLOG_SLUG );
+	buddypress()->members->nav->edit_nav( array('name' => 'Notes',), BUDDYBLOG_ARCHIVE_SLUG, BP_BUDDYBLOG_SLUG );
 }
 add_action( 'bp_actions', 'bpcodex_rename_profile_tabs' );
 
